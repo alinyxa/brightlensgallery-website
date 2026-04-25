@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Контакт – Brightlensgallery</title>
+    <meta name="description" content="Контакти фотографа в Одесі. Зв’яжіться для бронювання фотосесії.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,400;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="services-page contact-page">
+
+    <h1 style="position:absolute; left:-9999px;">Контакти фотографа</h1>
+
+    <div class="side-text services-side">КОНТАКТ</div>
+
+    <header class="header">
+        <div class="container header-inner">
+
+            <div class="logo">
+                <img src="image/favicon.png" alt="logo">
+            </div>
+
+            <div class="menu-toggle">
+                <img src="image/menu.png" alt="menu">
+            </div>
+
+            <nav class="nav">
+                <a href="index.html">Про мене</a>
+                <a href="services.html">Послуги</a>
+                <a href="portfolio.html">Портфоліо</a>
+                <a href="contact.html" class="active">Контакт</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="contact">
+
+        <div class="container">
+
+            <div class="contact-wrapper">
+
+                <div class="contact-left">
+
+                    <h2>/ Якщо ви</h2>
+
+                    <p class="contact-desc">
+                        хочете забронювати фотосесію або поставити запитання,
+                        зв’яжіться зі мною будь-яким зручним способом.
+                    </p>
+
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/твійID" method="POST">
+
+                        <input type="text" name="name" placeholder="Ваше ім’я" required minlength="2">
+
+                        <input type="tel" name="phone" placeholder="Номер телефону" required
+                            pattern="^\+?[0-9\s]{10,15}$">
+
+                        <button type="submit">Забронювати</button>
+
+                    </form>
+                    <div id="successMessage" class="success-message">
+                        Дякую! Заявка відправлена ✔
+                    </div>
+
+                </div>
+
+                <div class="contact-right">
+                    <img src="image/photo.jpg" alt="photo">
+                </div>
+
+            </div>
+
+            <div class="contact-extra">
+
+                <div class="slash-top">/</div>
+
+                <div class="contact-info">
+
+                    <div class="contact-col">
+
+                        <div class="contact-item">
+                            <a href="https://tiktok.com" target="_blank">
+                                <img src="image/tiktok.png" alt="tiktok">
+                                <span>brightlensgallery</span>
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <a href="https://instagram.com" target="_blank">
+                                <img src="image/instagram.png" alt="instagram">
+                                <span>brightlensgallery</span>
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <a href="https://facebook.com" target="_blank">
+                                <img src="image/facebook.png" alt="facebook">
+                                <span>brightlensgallery</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="contact-col">
+
+                        <div class="contact-item">
+                            <a href="https://www.google.com/maps?q=Одеса,+Україна" target="_blank">
+                                <img src="image/location.png" alt="location">
+                            </a>
+                            <a href="https://www.google.com/maps?q=Одеса,+Україна" target="_blank">
+                                <span>Одеса, Україна</span>
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <a href="tel:+380686440536">
+                                <img src="image/phone.png" alt="phone">
+                            </a>
+                            <a href="tel:+380686440536">
+                                <span>+380 686 440 536</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="slash-bottom">/</div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
