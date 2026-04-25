@@ -27,8 +27,11 @@ if (form) {
             return;
         }
 
+        showSuccessMessage();
+        form.reset();
     });
 }
+
 function showSuccessMessage() {
     const msg = document.getElementById("successMessage");
 
@@ -36,5 +39,5 @@ function showSuccessMessage() {
 
     setTimeout(() => {
         msg.classList.remove("show");
-    }, 3000);
+    }, 10000)
 }
