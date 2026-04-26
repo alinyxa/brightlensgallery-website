@@ -3,6 +3,7 @@ body {
     background: #ffffff; 
     color: #000000;   
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .header {
@@ -18,18 +19,19 @@ body {
 }
 
 .container {
-    max-width: 1194px; /* 1440 - 123*2 */
+    max-width: 1194px; 
 }
 
 .logo img {
     height: 90px;
     margin-bottom: 30px;
+    margin-top: 15px;
 }
 
 .nav {
     display: flex;
     justify-content: center;
-    gap: 120px; /* трохи менше щоб не ламалось */
+    gap: 120px; 
 }
 
 .nav a {
@@ -129,7 +131,7 @@ body {
 .why-content {
     display: flex;
     justify-content: center;
-    gap: 193px; /* як у тебе */
+    gap: 193px; 
 }
 
 .why-col {
@@ -141,7 +143,7 @@ body {
 .why-item {
     display: flex;
     align-items: center;
-    gap: 70px; /* від 01 до тексту */
+    gap: 70px; 
 }
 
 .why-item span {
@@ -152,7 +154,7 @@ body {
 
 .why-item p {
     font-size: 20px;
-    font-weight: 400; /* Montserrat regular */
+    font-weight: 400; 
     max-width: 250px;
 }
 
@@ -217,7 +219,7 @@ body {
 
     .hero-img {
         height: 700px;
-        object-position: 50% center;
+        object-position: 40% center;
     }
 
     .social {
@@ -265,12 +267,41 @@ body {
 
 @media (max-width: 768px) {
 
+     .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        z-index: 1000;
+    }
+
     .header-inner {
-        padding-top: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0 15px;
+        padding-top: 0;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .logo img {
-        height: 60px;
+        height: 40px;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .nav {
@@ -279,16 +310,20 @@ body {
     }
 
     .nav a {
-        font-size: 18px;
+        font-size: 20px;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
     .hero-img {
-        height: 500px;
+        height: 50vh;
         object-position: 40% center;
     }
-
     .social {
-    right: 5vw;}
+        right: 5vw;
+    }
 
     .why-item span {
         font-size: 50px;
@@ -330,7 +365,7 @@ body {
 
     .hero-img {
         height: 400px;
-        object-position: 30% center;
+        object-position: 10% center;
     }
 
     .social {
@@ -384,8 +419,13 @@ body {
     position: relative;
 }
 
-.services {
-    padding-top: 300px;
+@media (min-width: 769px) {
+    .services {
+        padding-top: 300px;
+    }
+    .contact {
+        padding-top: 200px;
+    }
 }
 
 .service-item {
@@ -396,8 +436,9 @@ body {
 }
 
 .service-img {
-    width: 427px;
-    height: 486px;
+    width: 100%;
+    max-width: 427px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -457,9 +498,6 @@ body {
 
 /* contact */
 
-.contact {
-    padding-top: 200px;
-}
 
 .contact-left {
     max-width: 630px; 
@@ -674,6 +712,7 @@ body {
 
     .contact-left h2 {
         font-size: 48px;
+        margin-top: 0;
     }
 
     .contact-desc {
@@ -785,4 +824,70 @@ body {
 .success-message.show {
     opacity: 1;
     transform: translateY(0);
+}
+.mobile-title {
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    display: none;
+    color: white; 
+}
+
+
+@media (max-width: 768px) {
+
+    .services,
+    .contact {
+        padding-top: 40px; 
+    }
+
+    .mobile-title {
+        display: block;
+        text-align: center;
+        font-size: clamp(50px, 8vw, 80px);
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: white;
+        opacity: 0.12;
+    }
+
+    .contact-wrapper {
+        gap: 10px; 
+    }
+
+    .contact-right {
+        margin-top: 10px; 
+    }
+
+    .contact-extra {
+        margin-top: 70px; 
+        padding-bottom: 40px;
+    }
+}
+
+button,
+.details-btn,
+.portfolio-btn {
+    min-height: 44px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 576px) {
+    .social {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    .contact-left {
+        max-width: 630px;
+        margin: 0 auto;
+    }
+
+    .contact-desc {
+        width: 100%;
+    }
 }
