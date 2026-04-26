@@ -40,6 +40,7 @@
     </header>
 
     <main class="contact">
+        <h2 class="mobile-title">Контакти</h2>
 
         <div class="container">
 
@@ -57,10 +58,11 @@
                     <form class="contact-form" id="contactForm" action="https://formspree.io/f/ID" method="POST"
                         target="_blank">
 
-                        <input type="text" name="name" placeholder="Ваше ім’я" required minlength="2">
+                        <input type="text" name="name" placeholder="Ваше ім’я" required minlength="2"
+                            autocomplete="name">
 
                         <input type="tel" name="phone" placeholder="Номер телефону" required
-                            pattern="^\+?[0-9\s]{10,15}$">
+                            pattern="^\+?[0-9\s]{10,15}$" autocomplete="tel">
 
                         <button type="submit">Забронювати</button>
 
